@@ -11,13 +11,14 @@ namespace CircleExceptions
     {
 
         //attribute
-        public double radius;
+        // public double radius;
 
 
         //get
         public double Radius 
         { 
             get;
+            set;
         }
 
         //constructor
@@ -43,13 +44,13 @@ namespace CircleExceptions
                 throw new InvalidRadiusException(radius);
             }
 
-            this.radius = radius;
+            Radius = radius;
 
         }
 
         public override string ToString()
         { 
-            return $"This circle has a radius {radius}"; 
+            return $"This circle has a radius {Radius}"; 
         }
     }
 }

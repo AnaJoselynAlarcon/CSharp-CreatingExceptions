@@ -8,6 +8,7 @@ namespace CircleExceptions
 {
     internal class InvalidRadiusException : Exception
     {
+        public double Radius { get; set; }
 
         //no argument constructor 
         public InvalidRadiusException() : base("Invalid radius")
@@ -16,13 +17,12 @@ namespace CircleExceptions
             
         }
 
-        public double Radius { get; set; }
 
         //constructor accepts the value of the radius 
         public InvalidRadiusException(double radius) : base("Invalid radius: " + radius)
         {
             //prints the raduis along with a message that it is not valid.
-            this.Radius= radius;
+            this.Radius = radius;
         }
     }
 }
